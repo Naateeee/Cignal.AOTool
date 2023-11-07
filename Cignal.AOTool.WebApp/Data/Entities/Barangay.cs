@@ -12,10 +12,10 @@ namespace Cignal.AOTool.WebApp.Data.Entities
         [Required,MaxLength(50)]
         public string BarangayNo { get; set;}
 
-        [Required,MaxLength(50)]
+        [Required]
         public string BarangayName { get; set; }
 
-        [Required,MaxLength(50)]
+        [Required]
         public string SystemName { get; set; }
 
         [Required]

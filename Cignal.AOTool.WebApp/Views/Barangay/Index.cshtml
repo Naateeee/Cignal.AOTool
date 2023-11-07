@@ -1,0 +1,39 @@
+@model IEnumerable<Barangay>;
+
+@{
+    ViewData["Title"] = "Barangay Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>List of Barangay</p>
+</div>
+
+<table class="table">
+<thead>
+<tr>
+    <th scope="col">Barangay No.</th>
+    <th scope="col">Barangay Name</th>
+    <th scope="col">System Name</th>
+    <th scope="col">Zip Code</th>
+    <th scope="col">City</th>
+</tr>
+</thead>
+<tbody>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.BarangayNo</td>
+            <td>@item.BarangayName</td>
+            <td>@item.SystemName</td>
+            <td>@item.ZipCode</td>
+            <td>@item.City.CityName</td>
+            <td>
+                <a  class="btn btn-info">Edit</a>
+                <a  class="btn btn-danger">Delete</a>  
+            </td>
+        </tr>
+
+    }
+</tbody>
+</table>
