@@ -20,7 +20,6 @@ namespace Cignal.AOTool.WebApp.Controllers
             _logger = logger;
             _context = context;
         }
-
         public async Task<IActionResult> Index()
         {
             var barangays = await _context.Barangays
